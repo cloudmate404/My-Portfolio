@@ -27,6 +27,7 @@ html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 
@@ -34,7 +35,7 @@ html{
 body{
     background: var(--bg-color);
     overflow-x: hidden;
-    
+
 
 }
 
@@ -751,7 +752,6 @@ form{
     width: max(50vw, 700px);
     background-color: transparent;
     color: var(--white);
-    border-radius: 2rem;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -1161,7 +1161,7 @@ form{
 
     .project{
         width: 100%;
-        height: min(100vw, 400px);
+        height: max(100vw, 500px);
         margin-bottom: 3rem;
 
         
