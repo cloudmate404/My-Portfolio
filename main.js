@@ -2,8 +2,45 @@ const openMenu = document.getElementById('openMenu');
 const closeMenu = document.getElementById('closeMenu');
 const mainMenu = document.getElementById('mainMenu');
 const viewButton = document.getElementById('viewButton');
+const home = document.getElementById('logo');
 
+home.addEventListener('click', () => {
+    window.scrollTo(0,0)});
 
+//LOAD SCREEN STATE
+const screenHead = document.getElementById('screenHead');
+const screenLogo = document.getElementById('screenLogo');
+const loadScreenState = document.querySelector('.loadScreenState');
+const body = document.body
+
+window.onload =(e)=>{
+    // window.scrollTo({top:0, behavior:'smooth'})
+    loadAnimation()
+    window.scrollTo(0,0)
+
+    
+
+}
+
+function loadAnimation(){
+    const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});
+    loadScreenState.style.display = 'block';
+    body.style.overflowY = 'hidden'
+
+    tl2.fromTo(screenHead,{
+        y:-200
+    },{
+        y: 0
+    });
+
+    tl2.to(loadScreenState,{ opacity:0, delay:3, duration:0.4});
+}
+
+setTimeout(overF, 4000);
+function overF (){
+    body.style.overflowY = 'visible'
+
+}
 
 
 // CONTACT SECTION
