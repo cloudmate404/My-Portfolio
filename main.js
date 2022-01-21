@@ -14,22 +14,16 @@ const screenLogo = document.getElementById('screenLogo');
 const loadScreenState = document.querySelector('.loadScreenState');
 const body = document.body
 
-const loader = async() =>{
-    window.onload =(e)=>{
-        // window.scrollTo({top:0, behavior:'smooth'})
-        loadAnimation()
-        window.scrollTo(0,0)
-    
-    }
-}
 
-loader().then(displaytheRest())
+window.addEventListener('load', function(){
+    loadScreenState.parentElement.removeChild(loadScreenState);
+});
 
-function displaytheRest(){
-    thebody.style.display='block';
-    thebody.style.opacity ='1';
-}
-
+// function displaytheRest(){
+//     thebody.style.display='block';
+//     thebody.style.opacity ='1';
+// }
+loadAnimation()
 function loadAnimation(){
     const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});
     loadScreenState.style.display = 'block';

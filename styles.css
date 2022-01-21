@@ -1,7 +1,7 @@
-.theRest{
+/* .theRest{
     display: none;
     opacity: 0;
-}
+} */
 
 html{
     scroll-behavior: smooth;
@@ -22,7 +22,7 @@ html{
 
     --typewriter-speed: 5s;
     --typewriter-character: 25;
-    --delay:6s;
+    --delay:4s;
 
 }
 
