@@ -27,7 +27,6 @@ loadAnimation()
 function loadAnimation(){
     const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});
     loadScreenState.style.display = 'block';
-    body.style.overflowY = 'hidden'
 
     tl2.fromTo(screenHead,{
         y:-200
@@ -35,14 +34,9 @@ function loadAnimation(){
         y: 0
     });
 
-    tl2.to(loadScreenState,{ opacity:0, delay:3, duration:0.4});
 }
 
-setTimeout(overF, 4000);
-function overF (){
-    body.style.overflowY = 'visible'
 
-}
 
 
 // CONTACT SECTION
