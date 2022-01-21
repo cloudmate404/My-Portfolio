@@ -19,10 +19,6 @@ window.addEventListener('load', function(){
     loadScreenState.parentElement.removeChild(loadScreenState);
 });
 
-// function displaytheRest(){
-//     thebody.style.display='block';
-//     thebody.style.opacity ='1';
-// }
 loadAnimation()
 function loadAnimation(){
     const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});
@@ -207,12 +203,6 @@ function menuClose(){
 
 
 
-// document.querySelector('.openMenuDiv').addEventListener('click', div);
-
-// function div(){
-//     console.log('na another thing')
-// }
-
 
 document.onclick = function(clickEvent){
         if(  clickEvent.target.id !== 'mainMenu' && clickEvent.target.id !== 'closeMenu' && clickEvent.target.id !== 'openMenu' && clickEvent.target.id !== 'viewButton' ){
@@ -226,52 +216,12 @@ document.onclick = function(clickEvent){
     
 };
 
-// document.mainMenu.onclick = function(clickEvent){
-//     if(  clickEvent.target.id !== 'mainMenu' && clickEvent.target.id !== 'closeMenu' && clickEvent.target.id !== 'openMenu' ){
-//         // gsap.to(mainMenu,{x:'100%', duration:1})
-
-//         menuClose();
-//         console.log('omooooo')
-  
-//     }
-
-
-// };
-
-// document.onclick = function(clickEvent){
-//     if(clickEvent.target.tagName = 'a'){
-//         menuClose();
-//         console.log('lets run')
-
-
-//     }
-// };
 
 viewButton.addEventListener('click', test)
 
 function test(){
     console.log('viewBtn')
 }
-
-// document.onclick = function(clickEvent){
-//     if(mainMenu.classList.contains('menuO') && clickEvent.target.id !== 'mainMenu' && clickEvent.target.id !== 'closeMenu'){
-//         linkClose()
-    
-// }
-
-
-
-
-
-// const viewButtonTl = gsap.timeline({
-//     defaults: { duration: 0.35, ease: Power2.easeOut }
-// });
-// gsap.set(viewButton,{opacity:0});
-// viewButtonTl.fromTo(viewButton,{
-//     x:200, opacity:0, scale: 0   
-// },{
-//     x:0, opacity: 1, scale: 1, delay: 6,duration: 2
-// });
 
 
 
