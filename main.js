@@ -3,6 +3,7 @@ const closeMenu = document.getElementById('closeMenu');
 const mainMenu = document.getElementById('mainMenu');
 const viewButton = document.getElementById('viewButton');
 const home = document.getElementById('logo');
+const thebody = document.querySelector('.theRest');
 
 home.addEventListener('click', () => {
     window.scrollTo(0,0)});
@@ -13,14 +14,18 @@ const screenLogo = document.getElementById('screenLogo');
 const loadScreenState = document.querySelector('.loadScreenState');
 const body = document.body
 
-window.onload =(e)=>{
-    // window.scrollTo({top:0, behavior:'smooth'})
-    loadAnimation()
-    window.scrollTo(0,0)
-
+const loader = async() =>{
+    window.onload =(e)=>{
+        // window.scrollTo({top:0, behavior:'smooth'})
+        loadAnimation()
+        window.scrollTo(0,0)
     
-
+    }
 }
+
+loader().then(thebody.style.display='block')
+
+
 
 function loadAnimation(){
     const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});

@@ -30,7 +30,7 @@ html{
 body{
     background: var(--bg-color);
     overflow-x: hidden;
-
+    
 
 }
 
@@ -119,6 +119,10 @@ a{
 
 
 
+}
+
+.theRest{
+    display: none;
 }
 
 .openMenu,.closeMenu{
