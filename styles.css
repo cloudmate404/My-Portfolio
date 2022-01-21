@@ -17,7 +17,7 @@ html{
 
     --typewriter-speed: 5s;
     --typewriter-character: 25;
-    --delay:4.5s;
+    --delay:6s;
 
 }
 
@@ -101,7 +101,7 @@ a{
     content: attr(data-text);
     text-shadow: 0px 0px 20px var(--pinkishAccent-color);
     filter: blur(15px) brightness(0);
-    animation: flicker 2s linear 1s forwards;
+    animation: flicker 2s linear 2s forwards;
 }
 
 @keyframes flicker {
