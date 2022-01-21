@@ -1,3 +1,8 @@
+.theRest{
+    display: none;
+    opacity: 0;
+}
+
 html{
     scroll-behavior: smooth;
     overflow-y: visible;
@@ -26,6 +31,8 @@ html{
     padding: 0;
     box-sizing: border-box;
 }
+
+
 
 body{
     background: var(--bg-color);
@@ -121,9 +128,7 @@ a{
 
 }
 
-.theRest{
-    display: none;
-}
+
 
 .openMenu,.closeMenu{
     display: none;

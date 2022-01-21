@@ -23,9 +23,12 @@ const loader = async() =>{
     }
 }
 
-loader().then(thebody.style.display='block')
+loader().then(displaytheRest())
 
-
+function displaytheRest(){
+    thebody.style.display='block';
+    thebody.style.opacity ='1';
+}
 
 function loadAnimation(){
     const tl2 = gsap.timeline({defaults: {duration:1, ease: Power1.easeOut}});
