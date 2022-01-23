@@ -176,7 +176,7 @@ const contactBtn = document.querySelector('.contactBtn');
 const tl3 = gsap.timeline({defaults:{duration:0.75, ease:Power2.easeOut}})
 
 form.addEventListener('submit', e=>{
-    e.preventDefault();
+    // e.preventDefault();
     tl3.to('.contactHead, .contactBody', {y:30, opacity:0, pointerEvents: 'none'});
     tl3.to('form',{scale:0},'<');
     tl3.fromTo(submitted, {opacity:0, y:30}, {opacity:1, y:0});
