@@ -169,7 +169,7 @@ function colorize(color, line, placeholder){
 
 
 
-
+const submitted = document.querySelector('.submitted')
 
 //Send Button
 const contactBtn = document.querySelector('.contactBtn');
@@ -178,16 +178,10 @@ const tl3 = gsap.timeline({defaults:{duration:0.75, ease:Power2.easeOut}})
 form.addEventListener('submit', e=>{
     e.preventDefault();
     tl3.to('.contactHead, .contactBody', {y:30, opacity:0, pointerEvents: 'none'});
-    tl3.to('form',{scale:0.8},'<');
-    tl3.fromTo('.submitted', {opacity:0, y:30}, {opacity:1, y:0});
-    //Hand Wave
+    tl3.to('form',{scale:0},'<');
+    tl3.fromTo(submitted, {opacity:0, y:30}, {opacity:1, y:0});
 
-    gsap.set('#hand', {transformOrigin: 'left'})
-    gsap.fromTo('#hand',{
-        rotation: 0, y:0
-    },{
-        rotation:-10, y:2, ease:Elastic.easeOut.config(3,0.3), duration:4, delay:1
-    })
+   
 })
 
 
