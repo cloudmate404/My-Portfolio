@@ -3,6 +3,7 @@
 html{
     scroll-behavior: smooth;
     overflow-y: visible;
+    overflow-x: hidden;
 }
 
 :root{
@@ -419,6 +420,30 @@ a{
 
 .aboutMe span{
     color: var(--greenishAccent-color);
+}
+
+.aboutmeLink{
+    display: block;
+    margin-top: 1.5rem;
+}
+
+#more{
+    display: none;
+    color: var(--grey);
+}
+
+#myBtn{
+    font-size: 1.125rem;
+    font-family: 'Source Code Pro', monospace;
+
+    background-color: transparent;
+    color: var(--greenishAccent-color);
+    border: none;
+    border-bottom: 2px solid var(--greenishAccent-color);
+
+    padding:  0.25em;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
 }
 
 
