@@ -175,7 +175,7 @@ function colorize(color, line, placeholder){
 const contactBtn = document.querySelector('.contactBtn');
 const tl3 = gsap.timeline({defaults:{duration:0.75, ease:Power2.easeOut}})
 
-contactBtn.addEventListener('click', e=>{
+form.addEventListener('submit', e=>{
     e.preventDefault();
     tl3.to('.contactHead, .contactBody', {y:30, opacity:0, pointerEvents: 'none'});
     tl3.to('form',{scale:0.8},'<');
