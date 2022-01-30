@@ -14,6 +14,7 @@ const loadScreenState = document.querySelector('.loadScreenState');
 
 window.addEventListener('load', function(){
     loadScreenState.parentElement.removeChild(loadScreenState);
+
 });
 
 loadAnimation()
@@ -51,6 +52,9 @@ function readMore() {
 
 const containers = document.querySelectorAll('.input-container');
 const form = document.querySelector('form');
+const nameInput = document.querySelector('.input-name');
+const emailInput = document.querySelector('.input-email');
+const subjectInput = document.querySelector('.input-subject');
 
 const tl = gsap.timeline({defaults:{duration: 1}});
 
@@ -112,7 +116,8 @@ form.addEventListener('click', ()=>{
                     //COLORIZE
                     colorize('#05FDD8', line, placeholder);
                 }else{
-                    colorize('#FE2156', line, placeholder)
+                    colorize('#FE2156', line, placeholder);
+
                 }
             }
         
@@ -127,17 +132,7 @@ form.addEventListener('click', ()=>{
                 }
             }
 
-            // Phone validation
-
-            if(e.target.type === 'tel'){
-                let validPhone = validatePhone(e.target.value);
-                if(validPhone){
-                    //COLORIZE
-                    colorize('#05FDD8', line, placeholder);
-                }else{
-                    colorize('#FE2156', line, placeholder)
-                }
-            }
+        
 
         });
 
@@ -176,11 +171,37 @@ const contactBtn = document.querySelector('.contactBtn');
 const tl3 = gsap.timeline({defaults:{duration:0.75, ease:Power2.easeOut}})
 
 form.addEventListener('submit', e=>{
-    // e.preventDefault();
-    tl3.to('.contactHead, .contactBody', {y:30, opacity:0, pointerEvents: 'none'});
-    tl3.to('form',{scale:0},'<');
-    tl3.fromTo(submitted, {opacity:0, y:30}, {opacity:1, y:0});
+   
+    if(nameInput.value.length < 3){
+        nameInput.focus();
+        document.querySelector('.validName').style.display='block';
+        e.preventDefault();
+    }else{
+        document.querySelector('.validName').style.display='none';
 
+    }
+
+    if(emailInput.value == ''){
+        emailInput.focus();
+        document.querySelector('.validEmail').style.display='block';
+        e.preventDefault();
+    }else{
+        document.querySelector('.validEmail').style.display='none';
+
+    }
+
+    if(subjectInput.value.length < 3){
+        subjectInput.focus();
+        document.querySelector('.validSubject').style.display='block';
+        e.preventDefault();
+
+    }else{
+        document.querySelector('.validSubject').style.display='none';
+
+    }
+
+
+   
    
 })
 

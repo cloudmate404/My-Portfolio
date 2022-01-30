@@ -20,7 +20,7 @@ html{
 
     --typewriter-speed: 5s;
     --typewriter-character: 25;
-    --delay:3.5s;
+    --delay:1s;
 
 }
 
@@ -238,6 +238,7 @@ a{
 
 
 
+
 .heroText{
     font-size: clamp(1rem, 3vw + 0.75rem , 4rem);
     position: relative;
@@ -273,7 +274,6 @@ a{
         typewriter var(--typewriter-speed) var(--delay) steps(var(--typewriter-character)) forwards,
         blink 750ms steps(25) infinite;
 
-    animation: name duration timing-function delay iteration-count direction fill-mode;
 }
 
 
@@ -642,14 +642,21 @@ a{
 .githubLink, .goToLink, .linkedInLink{
     transition: all ease-out 0.3s;
     cursor: pointer;
+    /* filter: grayscale(100%); */
+    fill: var(--grey);
+    opacity: 0.4;
 }
 .githubLink:hover,
 .githubLink:focus,
 .githubLink:active,
 .goToLink:hover,
 .goToLink:focus,
-.goToLink:active{
+.goToLink:active,
+.linkedInLink:hover,
+.linkedInLink:focus,
+.linkedInLink:active{
     fill: var(--pinkishAccent-color);
+    opacity: 1;
 }
 
 .projectTitleR,
@@ -901,6 +908,13 @@ form{
   }
   
 
+  .validText{
+    color: var(--pinkishAccent-color);
+    margin-top: -1.4rem;
+    font-size: 0.75rem;
+    text-align: left;
+    display: none;
+  }
 
   
 /* 
@@ -1228,9 +1242,10 @@ form{
 
     .textImg{
         background: inherit;
+        text-align: center;
     }
     .textImgR{
-        text-align: left;
+        text-align: center;
     }
 
 
